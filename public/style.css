@@ -1,4 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic|Merriweather+Sans:800,700);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic|Merriweather+Sans:400);
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 body {
   font-family: "Merriweather", serif;
   background: #eee; }
@@ -9,21 +15,40 @@ body {
   margin: 0 auto; }
 
 .logo {
+  font-size: 500%;
   color: #e8308c;
   text-align: center; }
+
+.task-input {
+  width: 760px;
+  height: 50px;
+  font-size: 24px;
+  padding: 0 10px; }
+
+.task-add {
+  width: 190px;
+  height: 50px;
+  border: 0;
+  background: #e8308c;
+  color: white;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out; }
+  .task-add:hover {
+    background: #ce1773; }
 
 .completed {
   text-decoration: line-through; }
 
 .tasks {
   padding: 0;
-  list-style: none;
-  width: 400px; }
+  list-style: none; }
 
 .task {
   position: relative;
-  padding: 2px 0 2px 28px;
-  border-bottom: dotted 1px #ccc; }
+  padding: 2px 0 2px 26px;
+  border-bottom: dotted 1px #ccc;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; }
 
 form.update {
   position: absolute;
@@ -38,7 +63,8 @@ form.update input {
   cursor: pointer; }
 
 .tasks li.completed form.update input {
-  color: #47FD6B; }
+  color: #e8308c;
+  border: solid 1px #e1e1e1; }
 
 form.delete {
   display: inline; }

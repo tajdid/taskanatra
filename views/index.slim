@@ -1,6 +1,6 @@
 form.new action="/new/list" method="POST"
-  input type="text" name="list[name]"
-  input type="submit" value="+ List"
+  input type="text" name="list[name]" class="task-input"
+  input type="submit" value="+ List" class="task-add"
   
 ul.lists
   - @lists.each do |list|
