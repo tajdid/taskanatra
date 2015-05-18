@@ -9,6 +9,9 @@ $black: #222;
 $cloud-white: #E9E9E9;
 $primary-colour: #E8B730;
 
+$mobile: 640px;
+$tablet: 768px;
+
 // MAIN //////////////////////////////
 
 html {
@@ -34,6 +37,7 @@ body {
 }
 
 .header {
+  margin-bottom: 40px;
   padding: 100px 0;
   text-align: center;
   background: $black;
@@ -52,6 +56,19 @@ body {
     color: #888;
     font-size: 0.9em;
     margin: 0;
+
+    a {
+      color: #888;
+      text-decoration: none;
+      padding-bottom: 3px;
+      border-bottom: 1px solid rgba(#888, 0);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        padding-bottom: 0;
+        border-bottom: 1px solid rgba(#888, 1);
+      }
+    }
   }
 
   .add-form {
@@ -62,7 +79,8 @@ body {
       width: 80%;
       height: 50px;
       border: 0;
-      font-size: 24px;
+      font-family: $serif;
+      font-size: 1.3em;
       padding: 0 10px;
     }
 
@@ -72,7 +90,9 @@ body {
       border: 0;
       background: $primary-colour;
       color: white;
-      font-size: 18px;
+      font-family: $serif;
+      font-style: italic;
+      font-size: 1.3em;
       transition: all 0.3s ease-in-out;
 
       &:hover {
@@ -146,4 +166,10 @@ form.delete input{
     // margin-top: -1px;
     box-shadow: 0px 3px 10px rgba(#d1d1d1, 1);
   }
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #999;
 }
