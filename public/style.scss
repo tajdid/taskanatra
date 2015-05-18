@@ -81,7 +81,7 @@ body {
       border: 0;
       font-family: $serif;
       font-size: 1.3em;
-      padding: 0 10px;
+      padding: 0 20px;
     }
 
     .task-add {
@@ -104,6 +104,7 @@ body {
 
 .completed{
   text-decoration: line-through;
+  color: #aaa;
 }
  
 .tasks{
@@ -113,6 +114,7 @@ body {
  
 .task{
   position:relative;
+  font-size: 0.9em;
   padding:2px 0 2px 26px;
   border-bottom: dotted 1px #ccc;
   font-weight: 400;
@@ -132,10 +134,17 @@ form.update input{
 }
  
 .tasks li.completed form.update input{
-  color: #e8308c;
+  color: $primary-colour;
+
   border: solid 1px #e1e1e1;
 }
  
+.new {
+  margin-bottom: 12px;
+  input[type="text"] {
+    width: 100%;
+  }
+}
 form.delete{
   display:inline;
 }
@@ -150,6 +159,11 @@ form.delete input{
   padding:0;
   list-style:none;
   overflow:hidden;
+
+  h2 {
+    font-size: 1.1em;
+    margin: 6px 0 12px;
+  }
 }
    
 .list{
