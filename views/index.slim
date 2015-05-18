@@ -1,7 +1,14 @@
-form.new action="/new/list" method="POST"
-  input type="text" name="list[name]" class="task-input"
-  input type="submit" value="+ List" class="task-add"
-  
-ul.lists
-  - @lists.each do |list|
-    == slim :list, locals: { list: list }
+header.header
+  .container
+    h1.logo Taskanatra
+    p.tagline A basic todo app by <a href="http://tajdid.me.uk">Tajdid Rahman</a>
+
+    .add-form
+      form.new action="/new/list" method="POST"
+        input type="text" name="list[name]" class="task-input"
+        input type="submit" value="+ List" class="task-add"
+
+.container
+  ul.lists
+    - @lists.each do |list|
+      == slim :list, locals: { list: list }
