@@ -12,6 +12,16 @@ $primary-colour: #E8B730;
 $mobile: 640px;
 $tablet: 768px;
 
+// MIXINS /////////////////////////////
+
+%clearfix {
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
 // MAIN //////////////////////////////
 
 html {
@@ -34,11 +44,12 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+  @extend %clearfix;
 }
 
 .header {
   margin-bottom: 40px;
-  padding: 100px 0;
+  padding: 80px 0;
   text-align: center;
   background: $black;
 
@@ -72,7 +83,7 @@ body {
   }
 
   .add-form {
-    margin: 80px auto 0;
+    margin: 60px auto 0;
     width: 80%;
 
     .task-input {
@@ -81,6 +92,7 @@ body {
       border: 0;
       font-family: $serif;
       font-size: 1.3em;
+      font-style: italic;
       padding: 0 20px;
     }
 
@@ -92,7 +104,7 @@ body {
       color: white;
       font-family: $serif;
       font-style: italic;
-      font-size: 1.3em;
+      font-size: 1.4em;
       transition: all 0.3s ease-in-out;
 
       &:hover {
@@ -115,14 +127,14 @@ body {
 .task{
   position:relative;
   font-size: 0.9em;
-  padding:2px 0 2px 26px;
-  border-bottom: dotted 1px #ccc;
+  padding: 5px 0 5px 26px;
+  border-bottom: 1px solid #eee;
   font-weight: 400;
 }
  
 form.update{
   position:absolute;
-  bottom:2px;
+  bottom:7px;
   left:0;
 }
 form.update input{
